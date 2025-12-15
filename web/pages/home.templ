@@ -6,8 +6,10 @@ import (
 
 templ Home() {
     @layouts.Base() {
-        <main>
-            <h1>Testing Go Templ with Live Reload!</h1>
-        </main>
+        <section class="flex flex-col justify-center h-screen gap-4">
+            <h1 class="text-3xl">Testing Go Templ with Live Reload!</h1>
+            <div class="text-2xl text-blue-500">Test tailwind JIT</div>
+            <div class="bg-indigo-500 text-white px-4">Test make as single process supervisor</div>
+        </section>
     }
 }
