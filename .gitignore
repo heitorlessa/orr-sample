@@ -155,3 +155,6 @@ fabric.properties
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,go,goland
 
 bin/
+
+### Templ generated files###
+*_templ.go

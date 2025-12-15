@@ -1,0 +1,25 @@
+package layouts
+
+templ Base() {
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<title>ORR Sample</title>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+			<meta
+ 				name="description"
+ 				content="A contrived clone of AWS Well-Architected to practice GoTH Stack tools"
+			/>
+			<meta name="google" content="notranslate"/>
+
+			<script src="/static/js/htmx.min.js"></script>
+		</head>
+		<body>
+			<main class="container mx-auto px-4 py-4">
+				{ children... }
+			</main>
+		</body>
+	</html>
+}

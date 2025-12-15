@@ -1,19 +1,16 @@
 package main
 
 import (
-	"net/http"
-
+	"github.com/heitorlessa/orr-sample/internal/api/handlers"
 	"github.com/labstack/echo/v4"
 )
 
-const mg = "Hello ORR"
+const STATIC_ASSETS = "web/static"
 
 func main() {
 	e := echo.New()
 
-	e.GET("/", func(c echo.Context) error {
-		return c.String(http.StatusOK, mg)
-	})
-
+	e.Static("/static", STATIC_ASSETS)
+	e.GET("/", handlers.HomeHandler)
 	e.Logger.Fatal(e.Start(":8080"))
 }
