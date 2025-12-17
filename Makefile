@@ -20,6 +20,9 @@ gen-css: ## Compile used Tailwind CSS utilities (JIT)
 build: gen-css gen-templ ## Build binary under bin/
 	go build -o bin/orr cmd/orr/main.go
 
+run: build ## One-off build and run binary
+	./bin/orr
+
 watch-templ: ## Watch source code and templ components changes
 	templ generate \
 		--watch \
@@ -30,7 +33,7 @@ watch-css: ## Watch Tailwind CSS changes
 	npx @tailwindcss/cli -i ./web/assets/css/main.css -o ./web/static/css/main.css --watch
 
 watch: ## Hot-reload server
-	@make -j 2 watch-templ watch-css run
+	@make -j 2 watch-templ watch-css
 
 help: ## Show this help
 	@printf "\n$(COLOR_TITLE)%s$(COLOR_RESET)\n\n" "$(HELP_TITLE)"

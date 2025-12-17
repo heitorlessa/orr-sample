@@ -7,7 +7,7 @@ import (
 )
 
 const STATIC_ASSETS = "web/static"
-const DEFAULT_PORT = ":8080"
+const DEFAULT_PORT = "8080"
 
 func main() {
 	e := echo.New()
