@@ -14,6 +14,7 @@
     - [x] Add hot-reload
     - [x] Add tailwind css
     - [x] Add DaisyUI
+- [ ] Add `dev` target to install tools we need *(templ, goose, etc.)*
 
 > Initial Data modelling
 
