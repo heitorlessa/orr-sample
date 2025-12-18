@@ -1,0 +1,20 @@
+services:
+  db:
+    image: postgres:16
+    container_name: orr-postgres
+    environment:
+      POSTGRES_DB: orr
+      POSTGRES_USER: orr
+      POSTGRES_PASSWORD: orr
+    ports:
+      - "5432:5432"
+    volumes:
+      - orr_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U orr -d orr"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  orr_pgdata:
